@@ -1,0 +1,18 @@
+[
+    {
+      "comment_text": "A great learning platform",
+      "user_id": 1,
+      "post_id": 1
+    },
+    {
+      "comment_text": "Good place to take a Tech Quiz",
+      "user_id": 2,
+      "post_id": 2
+    },
+    {
+      "comment_text": "Good environment of Coding",
+      "user_id": 3,
+      "post_id": 3
+    }
+  ]
+  
