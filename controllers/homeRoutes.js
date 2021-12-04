@@ -54,7 +54,7 @@ router.get('dashboard/post/:id', async (req, res) => {
 });
 // edit post on dashboard
 
-router.get('dashboard/edit/:id', withAuth, (req, res) => {
+router.get('dashboard/edit/:id', withAuth, async (req, res) => {
 try{
   const dashEditdata = await Post.findOne(req.params.id,{
     include:[
