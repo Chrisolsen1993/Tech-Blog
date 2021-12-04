@@ -1,0 +1,152 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.tech { 
+  background-image:url('tech.jpeg');
+  
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: .5%;
+  box-shadow: 0px 8px 8px -4px gray ;
+ height: 250px;
+}
+#techid{
+  color:rgb(194, 236, 183);
+  font-family: "Times New Roman";
+  text-align: center;
+  padding:70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+li {
+  padding: 10px 25px;
+  
+  font-family: "Times New Roman", sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+  
+
+}
+a {
+  color: rgb(33, 33, 33);
+  /* box-shadow:  0 3px 10px rgb(0 0 0 / 0.5); */
+  text-decoration: none;
+  background-color: #fff; 
+  color: #202c2d;
+  text-shadow:
+    0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93,
+    -5px 4px #cdd2d5,
+    -5px 6px #808d93,
+    -6px 5px #cdd2d5,
+    -6px 7px #808d93,
+    -7px 6px #cdd2d5,
+    -7px 8px #808d93,
+    -8px 7px #cdd2d5;
+
+
+
+}
+a:hover {
+  color: rgb(5, 80, 5);
+}
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+main {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  text-align: center;
+  align-self: center;
+  color:black;
+  background-color: rgb(195, 231, 185);
+  width: 700px;
+  box-shadow: 0 5px 30px #cdd2d5;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 30px;
+}
+h3 {
+  
+  text-align:center;
+  color: rgb(33, 33, 33);
+  font-family: "Arial", sans-serif;
+  font-size: 30px;
+  font-style: oblique;
+  
+}
+
+h4 {
+  text-align:center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 11pt;
+  color: rgb(33, 33, 33);
+}
+h5 {
+  font-family: "Monospace", sans-serif;
+  font-size: 20px;
+}
+
+section:hover {
+  box-shadow: 0 5px 30px rgb(171, 171, 171);
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+.p-title{
+padding: 15px 0 10px 20px;
+}
+.content {
+background-color: white;
+padding: 20px ;
+}
+
+p {
+padding: 15px 0 10px 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 100px;
+font-size: 20px;
+color: rgb(33, 33, 33);
+}
+.date-post{
+  background-color: white;
+}
+#date{
+padding:50px;
+color: rgb(26, 106, 3);
+}
+

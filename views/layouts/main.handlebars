@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>THE TECH BLOG</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Six Caps Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Teko:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <header>
+      <div class="tech">
+        <h2 id="techid">TECH-BLOG</h2>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a id="home" href="/">Home</a></li>
+          <li><a id="dash" href="/dashboard">Dashboard</a></li>
+          {{#if loggedIn}}
+            <li><a id="logout" href="/logout">Logout</a></li>
+          {{else}}
+            <li><a id="login" href="/login">Login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+
+  
+    <main>
+      {{{body}}}
+    </main>
+
+     <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+    <footer></footer>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">💸</span>
+        <a href="/">Fund My Project!</a>
+      </h1>
+    <nav>
+      <ul class="nav">
+          <li><a id="home" href="/">home</a></li>
+          <li><a id="dash" href="/dash">dashbord</a></li>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+        </ul>
+    </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html> --}}
