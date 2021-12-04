@@ -2,16 +2,16 @@
   {
     "title": "CSS-Tricks",
     "content": "When it was founded back in 2007, CSS-Tricks was primarily all about CSS. Since then, the blog has become all about web design and development. It provides you with video screencasts about HTML, Flexbox, building games with JavaScript and more. It contains a section with complete guides ranging from table elements to jQuery to CSS Gradients, as well as an almanac that lists CSS selectors and properties.",
-    "userId": 1
+    "user_id": 1
   },
   {
     "title": "The Ultimate Tech Quiz",
     "content": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "userId": 2
+    "user_id": 2
   },
   {
     "title": "CodePen",
     "content": "CodePen is an online community for testing and showcasing user-created HTML, CSS and JavaScript code snippets. It works by letting you create “pens,” which are sets of HTML, CSS, and JavaScript. It serves as an online code editor and an open-source learning environment. CodePen is one of the largest communities for web designers to show their coding skills.",
-    "userId": 3
+    "user_id": 3
   }
 ]
