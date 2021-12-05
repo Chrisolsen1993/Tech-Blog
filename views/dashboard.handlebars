@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
   </div>
@@ -25,9 +25,9 @@
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
-  </div>
+  </div> --}}
 
-  {{#if projects.length}}
+  {{!-- {{#if projects.length}}
   <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
 
@@ -46,3 +46,61 @@
 </div>
 
 <script src="./js/dashboard.js"></script>
+{{#if posts.length}}
+<div id="dashboard">
+  <div>
+    <h3>DASHBOARD</h3>
+  </div>
+  <div class="dash_body">
+    <h4>:</h4>
+    {{#each posts as |post|}}
+      <section class="user_articles">
+        <li>{{article.title}}</li>
+        <h5 class="date" id="date">{{format_date article.date_created}}</h5>
+      </section>
+    {{/each}}
+    <button id="post"><a href="/create">
+        <h3>+ NEW POST</h3></a>
+    </button>
+  </div>
+</div> --}}
+
+
+
+
+ <div>
+    <h3>DASHBOARD</h3>
+  </div>
+
+
+
+
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{posts.user.username}}!</h2>
+  </div>
+</div>
+
+{{#if posts.lenght}}
+{{#each posts as |post| }}
+  <section>
+    <h2> Current Posts</h2>
+            <div class="P-title">
+              <h3>{{title}}</h3>
+            </div>
+            <div class="content">
+              <p>
+               {{content}} 
+              </p>
+            </div>
+              <div class="date-post">
+                
+                <h5 id="date">Posted by {{post.user.username}} on {{format_date post.date_created}}</h5>
+              </div>
+           
+  </section>
+{{/each}}
+{{if}}
+<button type="submit" class="btn"><a class="link" href="/newpost">+ New Post</a></button>
+
+<script src="./js/new-dashboard.js"></script>
