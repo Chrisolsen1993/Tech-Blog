@@ -31,7 +31,7 @@
           <li><a id="home" href="/">Home</a></li>
           <li><a id="dash" href="/dashboard">Dashboard</a></li>
           {{#if loggedIn}}
-            <li><a id="logout" href="/logout">Logout</a></li>
+            <li><a id="logout" href="/#">Logout</a></li>
           {{else}}
             <li><a id="login" href="/login">Login</a></li>
           {{/if}}
@@ -45,7 +45,7 @@
     </main>
 
      <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 
