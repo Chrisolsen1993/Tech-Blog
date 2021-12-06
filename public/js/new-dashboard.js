@@ -15,9 +15,10 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        console.log(response)
         document.location.replace('/dashboard');
       } else {
-        alert('Failed to create project');
+        alert('Failed to create post');
       }
     }
   };
