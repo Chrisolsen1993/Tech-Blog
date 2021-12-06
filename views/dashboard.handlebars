@@ -80,11 +80,11 @@
     <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
-
-{{#if posts.lenght}}
+<h2> Current Posts</h2>
+{{#if posts.length}}
 {{#each posts as |post| }}
   <section>
-    <h2> Current Posts</h2>
+    
             <div class="P-title">
               <h3>{{title}}</h3>
             </div>
@@ -95,7 +95,7 @@
             </div>
               <div class="date-post">
                 
-                <h5 id="date">Posted by {{post.user.username}} on {{format_date post.date_created}}</h5>
+                <h5 id="date">Posted on {{format_date post.date_created}}</h5>
               </div>
            
   </section>
@@ -103,4 +103,4 @@
 {{/if}}
 <button type="submit" class="btn"><a class="link" href="/newpost">+ New Post</a></button>
 
-<script src="./js/new-dashboard.js"></script>
+{{!-- <script src="./js/new-dashboard.js"></script> --}}
