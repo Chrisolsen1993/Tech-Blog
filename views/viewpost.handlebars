@@ -1,4 +1,4 @@
-<p>home</p>
+
 <section>
   <div class="P-title">
               <h3>{{title}}</h3>
@@ -17,18 +17,18 @@
       {{#each comments}}
     <div class="comments_container">
         <h4 id="comment_content">{{comment_text}}</h4>
-        {{!-- <h4 id="comment_username">-{{user.username}}</h4>
-        <h4 id="comment_date">{{format_date date_created}}</h4> --}}
+        <h4 id="comment_username">-{{user.username}}</h4>
+        <h4 id="comment_date">{{format_date date_created}}</h4>
     </div>
       {{/each}}
 
     {{! If logged in, user can comment }}
-    {{#if logged_in}}
+    {{#if loggedIn}}
       <div class="new-comment-form">
         <div class="comments">
           <li id="adjust">COMMENT?</li>
           <textarea id="article_content" class="comment_text"></textarea>
-          <button id="comment"><h3>SUBMIT</h3></button>
+          <button id="comment"><h4>SUBMIT</h4></button>
         </div>
       </div>
     {{/if}}

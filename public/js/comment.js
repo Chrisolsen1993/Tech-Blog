@@ -2,13 +2,13 @@ const commentFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
-    const comment_text = document.querySelector('#comment').value.trim();
+    const comment_text = document.querySelector('.comment_text').value.trim();
     const post_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1];
   
     if (comment_text) {
       // Send a POST request to the API endpoint
-      const response = await fetch('/api/comments', {
+      const response = await fetch('/api/commentRoutes', {
         method: 'POST',
         body: JSON.stringify({ post_id, comment_text }),
         headers: { 'Content-Type': 'application/json' },
@@ -18,18 +18,14 @@ const commentFormHandler = async (event) => {
         // If successful, redirect the browser to the profile page
         document.location.reload();
       } else {
-        alert(response.statusText);
-        document.querySelector('#comment-form').style.display = "block";
+        alert("Failed to post a comment");
+        
       }
     }
   };
-  document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+  document.querySelector('.new-comment-form').addEventListener('submit', commentFormHandler);
   
   
-  
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
   
   
   
