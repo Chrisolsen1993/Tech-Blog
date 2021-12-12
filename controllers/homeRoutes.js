@@ -12,7 +12,11 @@ const post = await Post.findByPk(req.params.id, {
     },
     {
       model: Comment,
-      attributes: ['comment_text'],
+      attributes: ['id','comment_text', 'user_id', 'post_id','date_created'],
+      include: {
+        model: User,
+        attributes: ['username'],
+      },
     },
   ]
 })
@@ -21,7 +25,7 @@ const postData = post.get({ plain: true });
 console.log(postData)
 res.render('viewpost',{
   ...postData,
- 
+  loggedIn: req.session.logged_in 
 })
 
 }catch(err){
