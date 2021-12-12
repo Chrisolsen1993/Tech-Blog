@@ -2,6 +2,34 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.get('/viewpost/:id', async (req, res)=>{
+try{
+const post = await Post.findByPk(req.params.id, {
+  include: [
+    {
+      model: User,
+      attributes: ['username'],
+    },
+    {
+      model: Comment,
+      attributes: ['comment_text'],
+    },
+  ]
+})
+
+const postData = post.get({ plain: true });
+console.log(postData)
+res.render('viewpost',{
+  ...postData,
+ 
+})
+
+}catch(err){
+  res.status(500).json(err);
+}
+
+})
+
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data

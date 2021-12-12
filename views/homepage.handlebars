@@ -1,5 +1,7 @@
 
 {{#each posts as |post| }}
+<a href ="/viewpost/{{post.id}}">
+{{log post}}
   <section>
             <div class="P-title">
               <h3>{{title}}</h3>
@@ -15,4 +17,5 @@
               </div>
            
   </section>
+  </a>
 {{/each}}
