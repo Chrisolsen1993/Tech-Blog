@@ -26,7 +26,8 @@ const newPost = await Post.update({
   where: {
     id: req.params.id
   }
-})
+}) 
+console.log(newPost)
 if (!newPost) {
   res.status(404).json({ message: 'No post found with this id' });
   return;
