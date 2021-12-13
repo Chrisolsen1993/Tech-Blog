@@ -1,5 +1,6 @@
 const commentFormHandler = async (event) => {
     event.preventDefault();
+    console.log("sending comment");
   
     // Collect values from the login form
     const comment_text = document.querySelector('.comment_text').value.trim();
@@ -8,7 +9,7 @@ const commentFormHandler = async (event) => {
   
     if (comment_text) {
       // Send a POST request to the API endpoint
-      const response = await fetch('/api/commentRoutes', {
+      const response = await fetch('/api/comments', {
         method: 'POST',
         body: JSON.stringify({ post_id, comment_text }),
         headers: { 'Content-Type': 'application/json' },

@@ -15,6 +15,30 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+//update route
+router.put('/:id', withAuth, async (req, res) => {
+try{
+const newPost = await Post.update({
+  title: req.body.title,
+  post_content: req.body.post_content 
+},
+{
+  where: {
+    id: req.params.id
+  }
+})
+if (!newPost) {
+  res.status(404).json({ message: 'No post found with this id' });
+  return;
+}
+res.json(newPost);
+} catch(err){
+  res.status(400).json(err);
+}
+});
+
+
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.destroy({

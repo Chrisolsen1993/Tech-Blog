@@ -83,6 +83,7 @@
 <h2> Current Posts</h2>
 {{#if posts.length}}
 {{#each posts as |post| }}
+<a href="/editpost/{{post.id}}">
   <section>
     
             <div class="P-title">
@@ -99,6 +100,7 @@
               </div>
            
   </section>
+  </a>
 {{/each}}
 {{/if}}
 <button type="submit" class="btn"><a class="link" href="/newpost">+ New Post</a></button>
