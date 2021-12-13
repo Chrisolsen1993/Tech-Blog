@@ -74,7 +74,7 @@ router.get('/newpost', async (req, res) => {
 });
 // edit post on dashboard
 
-router.get('dashboard/edit/:id', withAuth, async (req, res) => {
+router.get('edit/:id', withAuth, async (req, res) => {
 try{
   const dashEditdata = await Post.findOne(req.params.id,{
     include:[
@@ -86,7 +86,7 @@ try{
   });
     const edit = dashEditdata.get({ plain: true });
 
-    res.render('edit-post', {
+    res.render('editpost', {
       edit,
       loggedIn: req.session.logged_in
  });
