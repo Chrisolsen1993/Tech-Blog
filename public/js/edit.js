@@ -1,4 +1,5 @@
 async function editFormHandler(event) {
+  console.log("working")
     event.preventDefault();
   
     const title = document.querySelector("#post_title").value;
@@ -26,4 +27,4 @@ async function editFormHandler(event) {
       }
   }
   
-  document.querySelector("#update").addEventListener('submit', editFormHandler);
+  document.querySelector("#update").addEventListener('click', editFormHandler);
